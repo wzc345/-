@@ -1,4 +1,5 @@
 //p4017
+//记录入度非常重要 不然会重复计数导致答案错误
 #include <bits/stdc++.h>
 using namespace std;
 const int mod=80112002;
@@ -21,7 +22,7 @@ int main() {
 	 	a[next].pos=next;
 	 	a[num].next.push_back(next);
 	 	dis[next]=true;
-	 	degree[next]++;
+	 	degree[next]++;//对入度的记录
 	}
 	int ans=0;
 	queue<animal> que;
